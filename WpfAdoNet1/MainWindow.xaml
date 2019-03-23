@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <TextBlock>Category</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="5">name: </TextBlock>
+                <TextBox x:Name="categoryNameTextBox" MinWidth="150"></TextBox>
+            </StackPanel>
+            <Button x:Name="addCategoryButton" Click="addCategoryButton_Click">Add</Button>
+        </StackPanel>
+        <TextBlock x:Name="categoriesTextBlock" Grid.Column="1"></TextBlock>
     </Grid>
 </Window>

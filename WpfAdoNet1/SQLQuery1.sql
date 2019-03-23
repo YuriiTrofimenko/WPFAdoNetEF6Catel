@@ -1,0 +1,5 @@
+﻿CREATE TABLE [Categories]
+(
+	[id] INT IDENTITY PRIMARY KEY,
+	[name] NVARCHAR(25)
+);
